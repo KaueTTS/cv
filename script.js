@@ -1,0 +1,3 @@
+function downloadPDF() {
+    window.print();
+}
