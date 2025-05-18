@@ -4,115 +4,67 @@
     <meta charset="UTF-8" />
     <title>Kauê Bertaze - Currículo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:700,500,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,500,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
     <div class="container">
-      <aside class="side">
+      <!-- Sidebar -->
+      <aside class="side" aria-label="Perfil lateral">
         <div class="avatar-glass">
           <div class="avatar">
-            <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQHilKwwF8T6Eg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727262412334?e=1753315200&v=beta&t=GOaDlAJviOaXpg5S0McGNJZsW-qiAmfoXLPSRGi_WRw"
-              alt="Kauê Bertaze Foto"
-            />
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQHilKwwF8T6Eg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727262412334?e=1753315200&v=beta&t=GOaDlAJviOaXpg5S0McGNJZsW-qiAmfoXLPSRGi_WRw" alt="Foto de Kauê Bertaze" />
           </div>
         </div>
-
-        <div>
-          <div class="name">Kauê Bertaze</div>
-          <div class="role">17/11/2004</div>
-        </div>
-
-        <div>
+        <header>
+          <h1 class="name">Kauê Bertaze</h1>
+          <div class="dob">17/11/2004</div>
+        </header>
+        <section aria-label="Contato">
           <div class="section-title">Contato</div>
           <ul class="info">
-            <li>
-              📧
-              <a href="mailto:kauebertaze2004@gmail.com"
-                >kauebertaze2004@gmail.com</a
-              >
-            </li>
+            <li>📧 <a href="mailto:kauebertaze2004@gmail.com">kauebertaze2004@gmail.com</a></li>
             <li>📱 <a href="tel:+5511987616657">(11) 98761-6657</a></li>
             <li>🌍 Diadema, Brasil</li>
-            <li>
-              💻
-              <a
-                href="https://github.com/KaueTTS"
-                target="_blank"
-                rel="noopener"
-                >github.com/KaueTTS</a
-              >
-            </li>
+            <li>💻 <a href="https://github.com/KaueTTS" target="_blank" rel="noopener">github.com/KaueTTS</a></li>
           </ul>
-        </div>
-
-        <div>
+        </section>
+        <section aria-label="Hobbies">
           <div class="section-title">Hobbies</div>
           <div class="skills">
             <span class="skill-chip">Programação</span>
             <span class="skill-chip">Livros</span>
             <span class="skill-chip">Academia</span>
-            <span class="skill-chip">Video Game</span>
-            <span class="skill-chip">Ar livre</span>
-            <span class="skill-chip">Tabuleiro</span>
+            <span class="skill-chip">Vídeo Game</span>
+            <span class="skill-chip">Atividades ao ar livre</span>
+            <span class="skill-chip">Jogos de Tabuleiro</span>
           </div>
-        </div>
-
-        <button class="download-btn" onclick="downloadPDF()">
-          <svg
-            class="download-ic"
-            width="18"
-            height="18"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <path
-              d="M10 3v10m0 0l-4-4m4 4l4-4M4 15h12"
-              stroke="#2563eb"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+        </section>
+        <button class="download-btn" onclick="downloadPDF()" aria-label="Baixar currículo em PDF">
+          <svg class="download-ic" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M10 3v10m0 0l-4-4m4 4l4-4M4 15h12" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           Baixar PDF
         </button>
       </aside>
 
+      <!-- Main Content -->
       <main class="main">
+        <!-- Sobre Mim -->
         <section>
           <div class="section-title">Sobre Mim</div>
           <div class="about">
-            <p>
-              Meu nome é Kauê Bertaze de Oliveira, sou um
-              entusiasta de tecnologia desde criança — sempre curioso em
-              entender como as coisas funcionam por trás das telas.
-            </p>
-            <p>
-              Atualmente tenho mais de 2 anos de
-              experiência em suporte técnico, além de habilidades em programação
-              e desenvolvimento de sistemas.
-            </p>
-            <p>
-              Estou buscando uma oportunidade para ampliar minhas habilidades em
-              desenvolvimento, colaborando com equipes multidisciplinares para
-              fornecer soluções tecnológicas completas e me tornar Desenvolvedor
-              Full Stack.
-            </p>
+            <p>Meu nome é Kauê Bertaze de Oliveira, sou um entusiasta de tecnologia desde criança — sempre curioso em entender como as coisas funcionam por trás das telas.</p>
+            <p>Atualmente tenho mais de 2 anos de experiência em suporte técnico, além de habilidades em programação e desenvolvimento de sistemas.</p>
+            <p>Estou buscando uma oportunidade para ampliar minhas habilidades em desenvolvimento, colaborando com equipes multidisciplinares para fornecer soluções tecnológicas completas e me tornar Desenvolvedor Full Stack.</p>
           </div>
         </section>
 
         <hr class="section-divider" />
 
+        <!-- Experiência -->
         <section>
           <div class="section-title">Experiência</div>
           <div class="exp">
@@ -120,40 +72,27 @@
               <div class="exp-dot"></div>
               <div class="exp-info">
                 <div class="exp-title">Analista de Sistemas Jr</div>
-                <div class="exp-company">Multi - São Paulo</div>
+                <div class="exp-company">Grupo Multi (multilaser) - São Paulo</div>
                 <div class="exp-date">Mar/2024 — atual</div>
-                <div>
-                  Suporte a sistemas Multi, documentação de processos,
-                  acompanhamento de erros, correções nos sistemas utilizando
-                  GMUDs e apoio ao time de desenvolvimento.
-                </div>
+                <div>Suporte a sistemas Grupo Multi (multilaser), documentação de processos, acompanhamento de erros, correções nos sistemas utilizando GMUDs e apoio ao time de desenvolvimento.</div>
               </div>
             </div>
-
             <div class="exp-item">
               <div class="exp-dot"></div>
               <div class="exp-info">
                 <div class="exp-title">Auxiliar de Suporte</div>
-                <div class="exp-company">Multi - São Paulo</div>
+                <div class="exp-company">Grupo Multi (multilaser) - São Paulo</div>
                 <div class="exp-date">dez/2023 — fev/2024</div>
-                <div>
-                  Atuação em microinformática, suporte a usuários, automação de
-                  processos internos e criação de imagens ISO.
-                </div>
+                <div>Atuação em microinformática, suporte a usuários, automação de processos internos e criação de imagens ISO.</div>
               </div>
             </div>
-
             <div class="exp-item">
               <div class="exp-dot"></div>
               <div class="exp-info">
                 <div class="exp-title">Jovem Aprendiz</div>
-                <div class="exp-company">Multi - São Paulo</div>
+                <div class="exp-company">Grupo Multi (multilaser) - São Paulo</div>
                 <div class="exp-date">fev/2023 — nov/2023</div>
-                <div>
-                  Preparo de máquinas e celulares para novos colaboradores,
-                  gerenciamento dos usuários no Active Directory, controle de
-                  chips e envio de equipamentos.
-                </div>
+                <div>Preparo de máquinas e celulares para novos colaboradores, gerenciamento dos usuários no Active Directory, controle de chips e envio de equipamentos.</div>
               </div>
             </div>
           </div>
@@ -161,15 +100,14 @@
 
         <hr class="section-divider" />
 
+        <!-- Educação -->
         <section>
           <div class="section-title">Educação</div>
           <div class="edu">
             <div class="edu-item">
               <div class="edu-dot"></div>
               <div class="edu-info">
-                <div class="edu-title">
-                  Bacharelado de Engenharia de Software
-                </div>
+                <div class="edu-title">Bacharelado de Engenharia de Software</div>
                 <div class="edu-org">Estácio - São Paulo</div>
                 <div class="edu-date">2023 — 2026 (em andamento)</div>
               </div>
@@ -179,36 +117,20 @@
 
         <hr class="section-divider" />
 
+        <!-- Skills -->
         <section>
           <div class="section-title">Skills</div>
           <div class="skills-cards">
             <div class="skill-card">
               <div class="card-title">
-                <svg
-                  width="19"
-                  height="19"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  style="margin-right: 6px"
-                >
-                  <circle
-                    cx="11"
-                    cy="11"
-                    r="10"
-                    stroke="#2563eb"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M7 11l3 3 5-5"
-                    stroke="#2563eb"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                <svg width="19" height="19" viewBox="0 0 22 22" fill="none" style="margin-right: 6px">
+                  <circle cx="11" cy="11" r="10" stroke="#2563eb" stroke-width="2" />
+                  <path d="M7 11l3 3 5-5" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 Hard Skills
               </div>
               <div class="skills-list">
+                <!-- skills... -->
                 <span class="skill-badge">SQL / MySQL</span>
                 <span class="skill-badge">MongoDB</span>
                 <span class="skill-badge">PHP</span>
@@ -240,30 +162,11 @@
                 <span class="skill-badge">Jira</span>
               </div>
             </div>
-
             <div class="skill-card">
               <div class="card-title">
-                <svg
-                  width="19"
-                  height="19"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  style="margin-right: 6px"
-                >
-                  <circle
-                    cx="11"
-                    cy="11"
-                    r="10"
-                    stroke="#2563eb"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M7 12h8M7 12a2 2 0 104 0"
-                    stroke="#2563eb"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+                <svg width="19" height="19" viewBox="0 0 22 22" fill="none" style="margin-right: 6px">
+                  <circle cx="11" cy="11" r="10" stroke="#2563eb" stroke-width="2" />
+                  <path d="M7 11l3 3 5-5" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 Soft Skills
               </div>
@@ -287,6 +190,7 @@
 
         <hr class="section-divider" />
 
+        <!-- Idioma -->
         <section>
           <div class="section-title">Idioma</div>
           <div class="lang">
@@ -296,18 +200,16 @@
                 <div class="lang-level">Nativo</div>
               </div>
             </div>
-
             <div class="lang-item">
               <div class="lang-info">
                 <div class="lang-title">Inglês</div>
-                <div class="lang-level">Nativo</div>
+                <div class="lang-level">Básico</div>
               </div>
             </div>
           </div>
         </section>
       </main>
     </div>
-
     <script src="./script.js"></script>
   </body>
 </html>
