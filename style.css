@@ -1,599 +1,630 @@
 :root {
-    --primary: #2563eb;
-    --primary-light: #3b82f6;
-    --bg: #f8fafc;
-    --glass: rgba(37, 99, 235, 0.16);
-    --side-width: 275px;
-    --text: #22223b;
-    --subtext: #727994;
-    --divider: #e3e6f0;
-    --glass-blur: 11px;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Inter", "Montserrat", Arial, sans-serif;
-    min-height: 100vh;
-    letter-spacing: 0.01em;
-  }
-  
-  /* -------- Layout -------- */
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --bg: #f8fafc;
+  --glass: rgba(37, 99, 235, 0.16);
+  --side-width: 275px;
+  --text: #22223b;
+  --subtext: #727994;
+  --divider: #e3e6f0;
+  --glass-blur: 11px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Montserrat", Arial, sans-serif;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+}
+
+/* -------- Layout -------- */
+.container {
+  display: flex;
+  max-width: 1080px;
+  min-height: 98vh;
+  margin: 30px auto 30px auto;
+  box-shadow: 0 10px 34px 0 #1e293b21;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.side {
+  background: linear-gradient(
+    140deg,
+    var(--primary) 78%,
+    var(--primary-light) 100%
+  );
+  color: #fff;
+  width: var(--side-width);
+  min-width: var(--side-width);
+  max-width: var(--side-width);
+  padding: 44px 26px 44px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+  position: relative;
+  box-shadow: 2px 0 28px 0 #1e293b13;
+  z-index: 2;
+}
+
+.avatar-glass {
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--glass);
+  box-shadow: 0 4px 18px #1e293b18, 0 1px 4px #fff4 inset;
+  margin-bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff4;
+  box-shadow: 0 2px 15px #0003;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.11);
+  display: block;
+}
+
+.name {
+  font-size: 1.54rem;
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.11em;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-shadow: 0 3px 16px #0001;
+}
+
+.dob {
+  font-size: 0.98rem;
+  color: #bdd6f7;
+  text-align: center;
+  margin-bottom: 14px;
+  font-family: "Inter", "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.side .section-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin: 25px 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.side ul,
+.side .info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.01rem;
+}
+
+.side .info a {
+  color: #bae6fd;
+  text-decoration: underline dotted;
+  transition: color 0.2s;
+  word-break: break-all;
+  font-weight: 500;
+}
+.side .info a:hover {
+  color: #fff;
+  text-decoration: underline solid;
+}
+.side ul li {
+  margin-bottom: 13px;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  word-break: break-all;
+}
+
+.side .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.side .skill-chip {
+  background: #fff3;
+  border-radius: 19px;
+  font-size: 0.99em;
+  padding: 4.5px 15px;
+  font-weight: 600;
+  color: #e0eaff;
+  box-shadow: 0 1px 3px #0001;
+  letter-spacing: 0.03em;
+  transition: background 0.22s, color 0.21s;
+  margin-bottom: 1px;
+}
+.side .skill-chip:hover {
+  background: #fff9;
+  color: var(--primary);
+}
+
+.download-btn {
+  background: #fff;
+  color: var(--primary);
+  border: none;
+  font-weight: 700;
+  padding: 10px 26px 10px 18px;
+  border-radius: 28px;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px #0002;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  transition: background 0.22s, color 0.22s, box-shadow 0.19s;
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+}
+.download-btn:hover {
+  background: #e3edff;
+  color: var(--primary-light);
+  box-shadow: 0 4px 16px #0003;
+}
+.download-ic {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main {
+  flex: 1;
+  padding: 54px 54px 56px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: #fff;
+  min-width: 0;
+}
+
+.section-divider {
+  border: none;
+  height: 1.5px;
+  background: var(--divider);
+  margin: 35px 0 23px 0;
+  width: 97%;
+  align-self: center;
+  opacity: 0.7;
+}
+
+.main .section-title {
+  font-size: 1.19rem;
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--primary);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+.main .about {
+  font-size: 1.13rem;
+  color: var(--text);
+  margin-bottom: 2px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.main .exp,
+.main .edu {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.main .exp-item,
+.main .edu-item {
+  display: flex;
+  gap: 17px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.main .exp-dot,
+.main .edu-dot {
+  min-width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-top: 8px;
+  box-shadow: 0 1px 3px #2563eb82;
+}
+
+.main .exp-info,
+.main .edu-info {
+  flex: 1;
+}
+
+.main .exp-title,
+.main .edu-title {
+  font-weight: 700;
+  font-size: 1.13em;
+  color: var(--text);
+  margin-bottom: 3.5px;
+  letter-spacing: 0.01em;
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+}
+
+.main .exp-company,
+.main .edu-org {
+  color: var(--subtext);
+  font-size: 1.01em;
+  margin-bottom: 2.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.main .exp-date,
+.main .edu-date {
+  color: #adc6fa;
+  font-size: 0.99em;
+  margin-bottom: 3px;
+}
+
+.skills-cards {
+  display: flex;
+  gap: 26px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+.skill-card {
+  background: #f7f9fecc;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px #2563eb13, 0 1.5px 12px #2563eb07;
+  padding: 26px 22px 21px 22px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.21s, transform 0.21s;
+  will-change: box-shadow, transform;
+}
+.skill-card:hover {
+  box-shadow: 0 8px 32px #2563eb22, 0 4px 14px #3b82f622;
+  transform: translateY(-1px) scale(1.012);
+}
+.card-title {
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 1.13rem;
+  color: var(--primary);
+  margin-bottom: 17px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.skill-badge {
+  background: #2563eb14;
+  color: #2563eb;
+  border-radius: 14px;
+  padding: 6px 16px;
+  font-size: 1.01em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 4.5px;
+  transition: background 0.19s, color 0.18s, box-shadow 0.19s;
+  box-shadow: 0 1px 4px #2563eb08;
+  border: 1px solid #2563eb13;
+  cursor: pointer;
+  user-select: none;
+}
+.skill-badge:hover {
+  background: #2563eb22;
+  color: #1840a7;
+  box-shadow: 0 3px 9px #2563eb21;
+}
+
+/* Idioma cards (language section) */
+.lang {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+.lang-item {
+  background: #f8fafd;
+  border-radius: 15px;
+  box-shadow: 0 1.5px 6px #2563eb13;
+  padding: 16px 22px;
+  min-width: 145px;
+  max-width: 240px;
+  flex: 1 1 160px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.lang-info {
+  flex: 1;
+}
+.lang-title {
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.09rem;
+  color: var(--primary);
+  margin-bottom: 3px;
+}
+.lang-level {
+  color: var(--subtext);
+  font-size: 1.01rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1050px) {
   .container {
-    display: flex;
-    max-width: 1080px;
-    min-height: 98vh;
-    margin: 30px auto 30px auto;
-    box-shadow: 0 10px 34px 0 #1e293b21;
-    border-radius: 22px;
-    overflow: hidden;
-    background: #fff;
-    transition: box-shadow .3s;
-  }
-  
-  .side {
-    background: linear-gradient(140deg, var(--primary) 78%, var(--primary-light) 100%);
-    color: #fff;
-    width: var(--side-width);
-    min-width: var(--side-width);
-    max-width: var(--side-width);
-    padding: 44px 26px 44px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 38px;
-    position: relative;
-    box-shadow: 2px 0 28px 0 #1e293b13;
-    z-index: 2;
-  }
-  
-  .avatar-glass {
-    padding: 8px;
-    border-radius: 50%;
-    background: var(--glass);
-    box-shadow: 0 4px 18px #1e293b18, 0 1px 4px #fff4 inset;
-    margin-bottom: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(var(--glass-blur));
-  }
-  
-  .avatar {
-    width: 112px;
-    height: 112px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #fff4;
-    box-shadow: 0 2px 15px #0003;
-  }
-  
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: saturate(1.11);
-    display: block;
-  }
-  
-  .name {
-    font-size: 1.54rem;
-    font-family: "Montserrat", "Inter", Arial, sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 0.11em;
-    letter-spacing: 0.01em;
-    color: #fff;
-    text-shadow: 0 3px 16px #0001;
-  }
-  
-  .dob {
-    font-size: 0.98rem;
-    color: #bdd6f7;
-    text-align: center;
-    margin-bottom: 14px;
-    font-family: "Inter", "Montserrat", Arial, sans-serif;
-    font-weight: 400;
-  }
-  
-  .side .section-title {
-    font-size: 1.08rem;
-    font-weight: 700;
-    margin: 25px 0 8px 0;
-    text-transform: uppercase;
-    letter-spacing: 0.10em;
-    color: #fff;
-    opacity: 0.95;
-  }
-  
-  .side ul,
-  .side .info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1.01rem;
-  }
-  
-  .side .info a {
-    color: #bae6fd;
-    text-decoration: underline dotted;
-    transition: color .2s;
-    word-break: break-all;
-    font-weight: 500;
-  }
-  .side .info a:hover {
-    color: #fff;
-    text-decoration: underline solid;
-  }
-  .side ul li {
-    margin-bottom: 13px;
-    display: flex;
-    align-items: center;
-    gap: 0.4em;
-    word-break: break-all;
-  }
-  
-  .side .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-  }
-  .side .skill-chip {
-    background: #fff3;
-    border-radius: 19px;
-    font-size: 0.99em;
-    padding: 4.5px 15px;
-    font-weight: 600;
-    color: #e0eaff;
-    box-shadow: 0 1px 3px #0001;
-    letter-spacing: 0.03em;
-    transition: background .22s, color .21s;
-    margin-bottom: 1px;
-  }
-  .side .skill-chip:hover {
-    background: #fff9;
-    color: var(--primary);
-  }
-  
-  .download-btn {
-    background: #fff;
-    color: var(--primary);
-    border: none;
-    font-weight: 700;
-    padding: 10px 26px 10px 18px;
-    border-radius: 28px;
-    cursor: pointer;
-    margin-top: 25px;
-    font-size: 1rem;
-    box-shadow: 0 2px 8px #0002;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    transition: background .22s, color .22s, box-shadow .19s;
-    font-family: "Montserrat", "Inter", Arial, sans-serif;
-  }
-  .download-btn:hover {
-    background: #e3edff;
-    color: var(--primary-light);
-    box-shadow: 0 4px 16px #0003;
-  }
-  .download-ic {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  
-  .main {
-    flex: 1;
-    padding: 54px 54px 56px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    background: #fff;
+    max-width: 99vw;
     min-width: 0;
   }
-  
-  .section-divider {
-    border: none;
-    height: 1.5px;
-    background: var(--divider);
-    margin: 35px 0 23px 0;
-    width: 97%;
-    align-self: center;
-    opacity: 0.7;
+  .main {
+    padding: 34px 10vw 32px 5vw;
   }
-  
-  .main .section-title {
-    font-size: 1.19rem;
-    font-family: "Montserrat", "Inter", Arial, sans-serif;
-    font-weight: 800;
-    margin-bottom: 16px;
-    color: var(--primary);
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    opacity: 0.92;
-  }
-  
-  .main .about {
-    font-size: 1.13rem;
-    color: var(--text);
-    margin-bottom: 2px;
-    line-height: 1.7;
-    letter-spacing: 0.01em;
-  }
-  
-  .main .exp,
-  .main .edu {
-    display: flex;
+}
+
+@media (max-width: 900px) {
+  .container {
     flex-direction: column;
-    gap: 26px;
+    min-width: 0;
+    max-width: 100vw;
   }
-  
-  .main .exp-item,
-  .main .edu-item {
-    display: flex;
-    gap: 17px;
-    align-items: flex-start;
-    position: relative;
-  }
-  
-  .main .exp-dot,
-  .main .edu-dot {
-    min-width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--primary);
-    margin-top: 8px;
-    box-shadow: 0 1px 3px #2563eb82;
-  }
-  
-  .main .exp-info,
-  .main .edu-info {
-    flex: 1;
-  }
-  
-  .main .exp-title,
-  .main .edu-title {
-    font-weight: 700;
-    font-size: 1.13em;
-    color: var(--text);
-    margin-bottom: 3.5px;
-    letter-spacing: 0.01em;
-    font-family: "Montserrat", "Inter", Arial, sans-serif;
-  }
-  
-  .main .exp-company,
-  .main .edu-org {
-    color: var(--subtext);
-    font-size: 1.01em;
-    margin-bottom: 2.5px;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-  }
-  
-  .main .exp-date,
-  .main .edu-date {
-    color: #adc6fa;
-    font-size: 0.99em;
-    margin-bottom: 3px;
-  }
-  
-  .skills-cards {
-    display: flex;
-    gap: 26px;
-    margin-top: 14px;
-    margin-bottom: 14px;
+  .side {
     width: 100%;
+    min-width: unset;
+    max-width: unset;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 8vw 30px 6vw;
+    box-shadow: none;
+  }
+  .main {
+    padding: 34px 5vw 34px 5vw;
+    gap: 22px;
+  }
+  .avatar-glass {
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+  .side {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 3vw 18px 3vw;
+    min-width: unset;
+    max-width: 100vw;
+  }
+  .main {
+    padding: 16px 2vw 18px 2vw;
+    gap: 15px;
+  }
+  .skills-cards {
+    flex-direction: column;
+    gap: 15px;
   }
   .skill-card {
-    background: #f7f9fecc;
-    border-radius: 20px;
-    box-shadow: 0 4px 24px #2563eb13, 0 1.5px 12px #2563eb07;
-    padding: 26px 22px 21px 22px;
-    flex: 1 1 0;
-    min-width: 0;
-    max-width: none;
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow .21s, transform .21s;
-    will-change: box-shadow, transform;
+    width: 100%;
   }
-  .skill-card:hover {
-    box-shadow: 0 8px 32px #2563eb22, 0 4px 14px #3b82f622;
-    transform: translateY(-1px) scale(1.012);
-  }
-  .card-title {
-    font-family: "Montserrat", "Inter", Arial, sans-serif;
-    font-weight: 800;
-    font-size: 1.13rem;
-    color: var(--primary);
-    margin-bottom: 17px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.02em;
-  }
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-  }
-  .skill-badge {
-    background: #2563eb14;
-    color: #2563eb;
-    border-radius: 14px;
-    padding: 6px 16px;
-    font-size: 1.01em;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    margin-bottom: 4.5px;
-    transition: background .19s, color .18s, box-shadow .19s;
-    box-shadow: 0 1px 4px #2563eb08;
-    border: 1px solid #2563eb13;
-    cursor: pointer;
-    user-select: none;
-  }
-  .skill-badge:hover {
-    background: #2563eb22;
-    color: #1840a7;
-    box-shadow: 0 3px 9px #2563eb21;
-  }
-  
-  /* Idioma cards (language section) */
   .lang {
-    display: flex;
-    gap: 28px;
-    flex-wrap: wrap;
-    margin-top: 6px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
   }
   .lang-item {
-    background: #f8fafd;
-    border-radius: 15px;
-    box-shadow: 0 1.5px 6px #2563eb13;
-    padding: 16px 22px;
-    min-width: 145px;
-    max-width: 240px;
-    flex: 1 1 160px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+    padding: 14px 12px;
   }
-  .lang-info {
-    flex: 1;
-  }
-  .lang-title {
-    font-family: "Montserrat", "Inter", Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1.09rem;
-    color: var(--primary);
-    margin-bottom: 3px;
-  }
-  .lang-level {
-    color: var(--subtext);
-    font-size: 1.01rem;
-    font-weight: 600;
-  }
-  
-  @media (max-width: 1050px) {
-    .container {
-      max-width: 99vw;
-      min-width: 0;
-    }
-    .main {
-      padding: 34px 10vw 32px 5vw;
-    }
-  }
-  @media (max-width: 900px) {
-    .container {
-      flex-direction: column;
-      min-width: 0;
-      max-width: 100vw;
-    }
-    .side {
-      width: 100%;
-      min-width: unset;
-      max-width: unset;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 30px;
-      padding: 30px 8vw 30px 6vw;
-      box-shadow: none;
-    }
-    .main {
-      padding: 34px 5vw 34px 5vw;
-      gap: 22px;
-    }
-    .avatar-glass {
-      margin-bottom: 0;
-      margin-right: 24px;
-    }
-  }
-  @media (max-width: 700px) {
-    .container {
-      margin: 0;
-      border-radius: 0;
-      min-height: 100vh;
-      box-shadow: none;
-    }
-    .side {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 18px 3vw 18px 3vw;
-      min-width: unset;
-      max-width: 100vw;
-    }
-    .main {
-      padding: 16px 2vw 18px 2vw;
-      gap: 15px;
-    }
-    .skills-cards {
-      flex-direction: column;
-      gap: 15px;
-    }
-    .skill-card {
-      width: 100%;
-    }
-    .lang {
-      flex-direction: column;
-      gap: 10px;
-      align-items: stretch;
-    }
-    .lang-item {
-      min-width: unset;
-      max-width: unset;
-      width: 100%;
-      padding: 14px 12px;
-    }
-  }
-  ::-webkit-scrollbar {
-    width: 7px;
-    background: #f3f4f7;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #b6c7e3;
-    border-radius: 10px;
-  }
-  
+}
+::-webkit-scrollbar {
+  width: 7px;
+  background: #f3f4f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #b6c7e3;
+  border-radius: 10px;
+}
+
 /* PDF */
-  @media print {
-    body, html {
-      background: #fff !important;
-      color: #000 !important;
-      margin: 0;
-      padding: 0;
-      -webkit-print-color-adjust: exact !important; /* Para tentar manter cores se quiser */
-      print-color-adjust: exact !important;
-      font-size: 11pt;
-    }
-  
-    .container {
-      max-width: 100vw !important;
-      min-width: 0 !important;
-      box-shadow: none !important;
-      border-radius: 0 !important;
-      margin: 0 !important;
-      display: block !important;
-      background: #fff !important;
-      width: 100% !important;
-      padding: 0 !important;
-    }
-  
-    .side {
-      background: #f5f5f5 !important;
-      color: #000 !important;
-      box-shadow: none !important;
-      width: 100% !important;
-      min-width: 0 !important;
-      max-width: 100% !important;
-      padding: 20px 16px 10px 16px !important;
-      border-radius: 0 !important;
-      display: block !important;
-      page-break-after: avoid;
-    }
-  
-    .main {
-      padding: 18px 18px 18px 18px !important;
-      background: #fff !important;
-      color: #000 !important;
-      box-shadow: none !important;
-      gap: 20px !important;
-    }
-  
-    .avatar-glass, .download-btn, .download-ic {
-      display: none !important;
-      visibility: hidden !important;
-    }
-    .side .name, .name {
-      color: #000 !important;
-      text-shadow: none !important;
-    }
-    .side .role, .role {
-      color: #444 !important;
-    }
-    .dob {
-      color: #555 !important;
-    }
-  
-    .section-divider {
-      background: #dadada !important;
-      opacity: 0.6 !important;
-      height: 1px !important;
-    }
-  
-    /* Remove box-shadows, rounded corners, and gradients for ALL cards */
-    .skill-card, .lang-item, .exp-item, .edu-item, .skills-cards, .skills-list, .skills-card, .skills, .card-title {
-      background: none !important;
-      box-shadow: none !important;
-      border-radius: 0 !important;
-      color: #000 !important;
-    }
-  
-    /* Skills chips em cinza claro */
-    .skill-badge, .skill-chip {
-      background: #e5e7eb !important;
-      color: #222 !important;
-      border: 1px solid #bbb !important;
-      box-shadow: none !important;
-    }
-  
-    /* Remove backgrounds coloridos do aside */
-    .side, aside {
-      background: #f5f5f5 !important;
-      color: #000 !important;
-    }
-  
-    /* Garante largura total */
-    .container, .main, .side {
-      width: 100vw !important;
-      max-width: 100vw !important;
-      min-width: 0 !important;
-      box-sizing: border-box !important;
-    }
-  
-    /* Remove links sublinhados e azuis */
-    a, a:visited {
-      color: #000 !important;
-      text-decoration: none !important;
-      border-bottom: 1px dotted #999;
-    }
-  
-    /* Deixa as seções separadas ao quebrar página */
-    section, .exp-item, .edu-item, .skill-card, .lang-item {
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-  
-    /* Remove scrollbars */
-    ::-webkit-scrollbar, ::-webkit-scrollbar-thumb {
-      display: none !important;
-      background: none !important;
-    }
-  
-    /* Remove "focus" visual em links */
-    a:focus {
-      outline: none !important;
-    }
-  
-    /* Ajusta tamanho das skills-cards para sempre 50% cada no print */
-    .skills-cards {
-      display: flex !important;
-      flex-direction: row !important;
-      gap: 18px !important;
-    }
-    .skill-card {
-      flex: 1 1 0 !important;
-      min-width: 0 !important;
-      max-width: 50% !important;
-      margin-bottom: 0 !important;
-    }
-    /* Se tela for muito estreita, empilha no print também */
-    @page {
-      margin: 12mm;
-    }
+@media print {
+  body,
+  html {
+    background: #fff !important;
+    color: #000 !important;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact !important; /* Para tentar manter cores se quiser */
+    print-color-adjust: exact !important;
+    font-size: 11pt;
   }
-  
+
+  .container {
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    background: #fff !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .side {
+    background: #f5f5f5 !important;
+    color: var(--primary) !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 20px 16px 10px 16px !important;
+    border-radius: 8px !important;
+    display: block !important;
+    page-break-after: avoid;
+  }
+
+  .section-title {
+    color: var(--primary) !important;
+  }
+
+  .main {
+    padding: 18px 18px 18px 18px !important;
+    background: #fff !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    gap: 20px !important;
+  }
+
+  .avatar-glass,
+  .download-btn,
+  .download-ic {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .side .name,
+  .name {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  .side .role,
+  .role {
+    color: #444 !important;
+  }
+  .dob {
+    color: #555 !important;
+  }
+
+  .section-divider {
+    background: #dadada !important;
+    opacity: 0.6 !important;
+    height: 1px !important;
+  }
+
+  /* Remove box-shadows, rounded corners, and gradients for ALL cards */
+  .skill-card,
+  .lang-item,
+  .exp-item,
+  .edu-item,
+  .skills-cards,
+  .skills-list,
+  .skills-card,
+  .skills,
+  .card-title {
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    color: #000 !important;
+  }
+
+  /* Skills chips em cinza claro */
+  .skill-badge,
+  .skill-chip {
+    background: #e5e7eb !important;
+    color: #222 !important;
+    border: 1px solid #bbb !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove backgrounds coloridos do aside */
+  .side,
+  aside {
+    background: #f5f5f5 !important;
+    color: #000 !important;
+  }
+
+  /* Garante largura total */
+  .container,
+  .main,
+  .side {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Remove links sublinhados e azuis */
+  a,
+  a:visited {
+    color: #000 !important;
+    text-decoration: none !important;
+    border-bottom: 1px dotted #999;
+  }
+
+  /* Deixa as seções separadas ao quebrar página */
+  section,
+  .exp-item,
+  .edu-item,
+  .skill-card,
+  .lang-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Remove scrollbars */
+  ::-webkit-scrollbar,
+  ::-webkit-scrollbar-thumb {
+    display: none !important;
+    background: none !important;
+  }
+
+  /* Remove "focus" visual em links */
+  a:focus {
+    outline: none !important;
+  }
+
+  /* Ajusta tamanho das skills-cards para sempre 50% cada no print */
+  .skills-cards {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 18px !important;
+  }
+  .skill-card {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: 50% !important;
+    margin-bottom: 0 !important;
+  }
+  /* Se tela for muito estreita, empilha no print também */
+  @page {
+    margin: 12mm;
+  }
+}
