@@ -520,6 +520,17 @@ body {
     display: block !important;
     page-break-after: avoid;
   }
+  
+  .info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
   .section-title {
     color: var(--primary) !important;
