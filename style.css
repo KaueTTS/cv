@@ -7,7 +7,7 @@
   --text: #22223b;
   --subtext: #727994;
   --divider: #e3e6f0;
-  --glass-blur: 11px;
+  --glass-blur: 12px;
 }
 
 * {
@@ -26,7 +26,7 @@ body {
 /* -------- Layout -------- */
 .container {
   display: flex;
-  max-width: 1080px;
+  max-width: 1100px;
   min-height: 98vh;
   margin: 30px auto 30px auto;
   box-shadow: 0 10px 34px 0 #1e293b21;
@@ -50,7 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 38px;
+  gap: 50px;
   position: relative;
   box-shadow: 2px 0 28px 0 #1e293b13;
   z-index: 2;
@@ -61,7 +61,7 @@ body {
   border-radius: 50%;
   background: var(--glass);
   box-shadow: 0 4px 18px #1e293b18, 0 1px 4px #fff4 inset;
-  margin-bottom: 1px;
+  margin-bottom: -50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,10 +132,12 @@ body {
   word-break: break-all;
   font-weight: 500;
 }
+
 .side .info a:hover {
   color: #fff;
   text-decoration: underline solid;
 }
+
 .side ul li {
   margin-bottom: 13px;
   display: flex;
@@ -163,6 +165,7 @@ body {
   transition: background 0.22s, color 0.21s;
   margin-bottom: 1px;
 }
+
 .side .skill-chip:hover {
   background: #fff9;
   color: var(--primary);
@@ -206,6 +209,7 @@ body {
   color: var(--primary-light);
   box-shadow: 0 4px 16px #0003;
 }
+
 .download-ic {
   display: inline-block;
   vertical-align: middle;
@@ -213,10 +217,9 @@ body {
 
 .main {
   flex: 1;
-  padding: 54px 54px 56px 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
   background: #fff;
   min-width: 0;
 }
@@ -225,8 +228,8 @@ body {
   border: none;
   height: 1.5px;
   background: var(--divider);
-  margin: 35px 0 23px 0;
-  width: 97%;
+  margin: 50px 0;
+  width: 90%;
   align-self: center;
   opacity: 0.7;
 }
@@ -245,9 +248,9 @@ body {
 .main .about {
   font-size: 1.13rem;
   color: var(--text);
-  margin-bottom: 2px;
   line-height: 1.7;
   letter-spacing: 0.01em;
+  margin-bottom: -20px;
 }
 
 .main .exp,
