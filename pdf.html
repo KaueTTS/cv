@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kauê Bertaze - Currículo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #ffffff;
+        color: #222;
+        padding: 40px;
+        line-height: 1.6;
+      }
+
+      .resume {
+        max-width: 800px;
+        margin: auto;
+        border: 1px solid #ddd;
+        padding: 40px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 16px;
+        border: 3px solid #2563eb;
+      }
+
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #2563eb;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 6px;
+      }
+
+      .contact {
+        font-size: 14px;
+        color: #333;
+        margin-top: 10px;
+      }
+
+      .section {
+        margin-top: 40px;
+      }
+
+      .section-title {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #2563eb;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 4px;
+      }
+
+      .paragraph {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+
+      .item {
+        margin-bottom: 16px;
+      }
+
+      .item-title {
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      .item-meta {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 4px;
+      }
+
+      .badge-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 8px;
+      }
+
+      .badge {
+        background: #2563eb;
+        color: #fff;
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+        }
+        .resume {
+          box-shadow: none;
+          border: none;
+        }
+        .section-title {
+          color: #000;
+          border-color: #aaa;
+        }
+        .badge {
+          background: #000;
+          color: #fff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume">
+      <div class="header">
+        <div class="avatar">
+          <img src="https://media.licdn.com/dms/image/v2/D4D03AQHilKwwF8T6Eg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727262412334?e=1753315200&v=beta&t=GOaDlAJviOaXpg5S0McGNJZsW-qiAmfoXLPSRGi_WRw" alt="Avatar de Kauê" />
+        </div>
+        <h1>Kauê Bertaze</h1>
+        <div class="subtitle">17/11/2004</div>
+        <div class="contact">
+          Diadema, SP &bull; kauebertaze2004@gmail.com &bull; (11) 98761-6657 &bull; github.com/KaueTTS &bull; linkedin.com/in/kauebertaze &bull; cv-kauebertaze.vercel.app
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Sobre Mim</div>
+        <div class="paragraph">
+            <p>Meu nome é Kauê Bertaze de Oliveira, sou um entusiasta de tecnologia desde criança — sempre curioso em entender como as coisas funcionam por trás das telas.</p><br>
+            <p>Atualmente tenho mais de 2 anos de experiência em suporte técnico, além de habilidades em programação e desenvolvimento de sistemas.</p><br>
+            <p>Estou buscando uma oportunidade para ampliar minhas habilidades em desenvolvimento, colaborando com equipes multidisciplinares para fornecer soluções tecnológicas completas e me tornar Desenvolvedor Full Stack.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Experiência Profissional</div>
+
+        <div class="item">
+          <div class="item-title">Analista de Sistemas Jr - Multi</div>
+          <div class="item-meta">Mar/2024 — Atual | São Paulo</div>
+          <div class="paragraph">Suporte a sistemas, documentação, correções via GMUDs e apoio ao time de desenvolvimento.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">Auxiliar de Suporte - Multi</div>
+          <div class="item-meta">Dez/2023 — Fev/2024 | São Paulo</div>
+          <div class="paragraph">Suporte a usuários, automação de processos e criação de imagens ISO.</div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">Jovem Aprendiz - Multi</div>
+          <div class="item-meta">Fev/2023 — Nov/2023 | São Paulo</div>
+          <div class="paragraph">Configuração de máquinas, Active Directory, controle de chips e equipamentos.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Formação</div>
+        <div class="item">
+          <div class="item-title">Engenharia de Software (Bacharelado)</div>
+          <div class="item-meta">Estácio - Conclusão prevista: 2026</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Skills Técnicas</div>
+        <div class="badge-list">
+          <span class="badge">SQL / MySQL</span>
+          <span class="badge">MongoDB</span>
+          <span class="badge">PHP</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Python</span>
+          <span class="badge">TypeScript</span>
+          <span class="badge">Node.js</span>
+          <span class="badge">Cypress</span>
+          <span class="badge">Sass</span>
+          <span class="badge">HTML5 & CSS3</span>
+          <span class="badge">MaterialUI</span>
+          <span class="badge">Tailwind</span>
+          <span class="badge">Laravel</span>
+          <span class="badge">Vue.js</span>
+          <span class="badge">React.js</span>
+          <span class="badge">Postman</span>
+          <span class="badge">Swagger</span>
+          <span class="badge">CI/CD</span>
+          <span class="badge">Testes unitários</span>
+          <span class="badge">Active Directory</span>
+          <span class="badge">Powershell</span>
+          <span class="badge">Kanban</span>
+          <span class="badge">Windows / Linux</span>
+          <span class="badge">Git / GitHub / GitLab</span>
+          <span class="badge">Grafana / Datadog</span>
+          <span class="badge">Docker</span>
+          <span class="badge">Machine Learning</span>
+          <span class="badge">Confluence</span>
+          <span class="badge">Jira</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Idiomas</div>
+        <div class="badge-list">
+          <div class="badge">Português (Nativo)</div>
+          <div class="badge">Inglês (Básico)</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        const element = document.querySelector('.resume');
+
+        const opt = {
+          margin:       0.3,
+          filename:     'curriculo-kaue-bertaze.pdf',
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2 },
+          jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save().then(() => {
+          window.close();
+        });
+      };
+    </script>
+  </body>
+</html>
