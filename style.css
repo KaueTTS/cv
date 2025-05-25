@@ -315,6 +315,7 @@ body {
   margin-bottom: 14px;
   width: 100%;
 }
+
 .skill-card {
   background: #f7f9fecc;
   border-radius: 20px;
@@ -328,10 +329,13 @@ body {
   transition: box-shadow 0.21s, transform 0.21s;
   will-change: box-shadow, transform;
 }
+
+.lang-item:hover,
 .skill-card:hover {
   box-shadow: 0 8px 32px #2563eb22, 0 4px 14px #3b82f622;
   transform: translateY(-1px) scale(1.012);
 }
+
 .card-title {
   font-family: "Montserrat", "Inter", Arial, sans-serif;
   font-weight: 800;
@@ -342,11 +346,13 @@ body {
   align-items: center;
   letter-spacing: 0.02em;
 }
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
 }
+
 .skill-badge {
   background: #2563eb14;
   color: #2563eb;
@@ -375,6 +381,7 @@ body {
   flex-wrap: wrap;
   margin-top: 6px;
 }
+
 .lang-item {
   background: #f8fafd;
   border-radius: 15px;
@@ -386,6 +393,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 4px;
+  transition: box-shadow 0.21s, transform 0.21s;
 }
 .lang-info {
   flex: 1;
@@ -397,13 +405,14 @@ body {
   color: var(--primary);
   margin-bottom: 3px;
 }
+
 .lang-level {
   color: var(--subtext);
   font-size: 1.01rem;
   font-weight: 600;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
   .container {
     max-width: 99vw;
     min-width: 0;
@@ -413,7 +422,7 @@ body {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .container {
     flex-direction: column;
     min-width: 0;
@@ -476,6 +485,7 @@ body {
     padding: 14px 12px;
   }
 }
+
 ::-webkit-scrollbar {
   width: 7px;
   background: #f3f4f7;
