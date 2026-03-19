@@ -308,6 +308,49 @@ body {
   margin-bottom: 3px;
 }
 
+.exp-description {
+  margin-top: 8px;
+}
+
+.exp-description p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exp-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.exp-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  background-color: #2563eb;
+  border-radius: 50%;
+}
+
+.exp-list li:hover {
+  color: #111;
+  transform: translateX(2px);
+  transition: 0.2s ease;
+}
+
 .skills-cards {
   display: flex;
   gap: 26px;
