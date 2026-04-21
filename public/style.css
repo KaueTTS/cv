@@ -210,6 +210,60 @@ img {
   background: #fff9;
 }
 
+.side section[aria-label="Idiomas"] {
+  width: 100%;
+}
+
+.side section[aria-label="Idiomas"] .info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.side section[aria-label="Idiomas"] .info li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 0;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.side section[aria-label="Idiomas"] .info li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.side section[aria-label="Idiomas"] .info li strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 0.97rem;
+  font-weight: 700;
+}
+
+.side section[aria-label="Idiomas"] .info li strong::before {
+  content: "🌐";
+  font-size: 0.95rem;
+}
+
+.side section[aria-label="Idiomas"] .info li span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #dbeafe;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .download {
   display: flex;
   flex-direction: column;
@@ -274,6 +328,7 @@ img {
   opacity: 0.7;
 }
 
+/* Main */
 .main .section-title {
   margin-bottom: 16px;
   color: var(--primary);
@@ -413,12 +468,6 @@ img {
   will-change: box-shadow, transform;
 }
 
-.lang-item:hover,
-.skill-card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-1px) scale(1.012);
-}
-
 .card-title {
   display: flex;
   align-items: center;
@@ -457,46 +506,6 @@ img {
   background: #2563eb22;
   box-shadow: 0 3px 9px #2563eb21;
   transform: translateY(-1px);
-}
-
-/* Idioma cards (language section) */
-.lang {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-  margin-top: 6px;
-}
-
-.lang-item {
-  display: flex;
-  flex: 1 1 160px;
-  align-items: center;
-  min-width: 145px;
-  max-width: 240px;
-  margin-bottom: 4px;
-  padding: 16px 22px;
-  background: var(--surface-soft);
-  border-radius: var(--radius-md);
-  box-shadow: 0 1.5px 6px #2563eb13;
-  transition: box-shadow 0.21s, transform 0.21s;
-}
-
-.lang-info {
-  flex: 1;
-}
-
-.lang-title {
-  margin-bottom: 3px;
-  color: var(--primary);
-  font-family: var(--font-title);
-  font-size: 1.09rem;
-  font-weight: 700;
-}
-
-.lang-level {
-  color: var(--subtext);
-  font-size: 1.01rem;
-  font-weight: 600;
 }
 
 @media (max-width: 1200px) {
@@ -568,19 +577,6 @@ img {
 
   .skill-card {
     width: 100%;
-  }
-
-  .lang {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .lang-item {
-    width: 100%;
-    min-width: unset;
-    max-width: unset;
-    padding: 14px 12px;
   }
 }
 
