@@ -1,0 +1,189 @@
+@media (max-width: 1200px) {
+  .container {
+    min-width: 0;
+    max-width: 99vw;
+  }
+
+  .main {
+    padding: 34px 10vw 32px 5vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    min-width: 0;
+    max-width: 100vw;
+  }
+
+  .side {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px 30px;
+    padding: 30px 6vw;
+    box-shadow: none;
+  }
+
+  .side header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .side section {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+
+  .avatar-glass {
+    margin-bottom: 0;
+  }
+
+  .download {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 12px;
+  }
+
+  .download-btn {
+    flex: 0 1 220px;
+    margin-top: 0;
+  }
+
+  .main {
+    gap: 22px;
+    padding: 34px 5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .side {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 6vw;
+    text-align: center;
+  }
+
+  .side section {
+    flex: unset;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .side .info {
+    text-align: left;
+  }
+
+  .side .section-title {
+    margin-top: 10px;
+  }
+
+  .download {
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .download-btn {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 0.93rem;
+  }
+
+  .main {
+    gap: 18px;
+    padding: 28px 5vw;
+  }
+
+  .section-divider {
+    margin: 28px 0;
+  }
+
+  .name {
+    font-size: 1.38rem;
+  }
+
+  .exp-title,
+  .edu-title {
+    font-size: 1.05rem;
+  }
+
+  .exp-company,
+  .edu-org {
+    font-size: 0.95rem;
+  }
+
+  .skills-carousel {
+    margin-top: 10px;
+  }
+
+  .carousel-prev {
+    left: -8px;
+  }
+
+  .carousel-next {
+    right: -8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .side {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: unset;
+    max-width: 100vw;
+    padding: 18px 3vw;
+  }
+
+  .download {
+    flex-direction: column;
+  }
+
+  .download-btn {
+    flex: unset;
+    width: 100%;
+  }
+
+  .main {
+    gap: 15px;
+    padding: 16px 2vw 18px;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .carousel-prev {
+    left: -4px;
+  }
+
+  .carousel-next {
+    right: -4px;
+  }
+
+  .carousel-dots {
+    margin-top: 14px;
+  }
+}

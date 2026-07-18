@@ -447,25 +447,41 @@ img {
   transform: translateX(2px);
 }
 
-.skills-cards {
-  display: flex;
-  gap: 26px;
+/* -------- Skills Carrossel -------- */
+.skills-carousel {
+  position: relative;
   width: 100%;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  padding: 0 10px;
+}
+
+.carousel-viewport {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  width: 100%;
+  min-width: 100%;
+  flex-shrink: 0;
+  padding: 6px 4px 10px;
 }
 
 .skill-card {
   display: flex;
-  flex: 1 1 0;
   flex-direction: column;
   min-width: 0;
   padding: 26px 22px 21px;
-  background: #f7f9fecc;
+  background: var(--surface-soft);
+  border: 1px solid var(--divider);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
   transition: box-shadow 0.21s, transform 0.21s;
-  will-change: box-shadow, transform;
 }
 
 .card-title {
@@ -483,6 +499,78 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--primary);
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.15), 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: background 0.22s, color 0.22s, box-shadow 0.22s, transform 0.22s;
+  z-index: 3;
+}
+
+.carousel-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-prev {
+  left: -14px;
+}
+
+.carousel-next {
+  right: -14px;
+}
+
+/* Carousel Dot Indicators */
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  opacity: 0.4;
+  transition: opacity 0.25s, background 0.25s, transform 0.25s, width 0.3s;
+}
+
+.carousel-dot.active {
+  width: 28px;
+  border-radius: 999px;
+  background: var(--primary);
+  opacity: 1;
+}
+
+.carousel-dot:hover:not(.active) {
+  opacity: 0.7;
+  transform: scale(1.15);
 }
 
 .skill-badge {
@@ -506,78 +594,6 @@ img {
   background: #2563eb22;
   box-shadow: 0 3px 9px #2563eb21;
   transform: translateY(-1px);
-}
-
-@media (max-width: 1200px) {
-  .container {
-    min-width: 0;
-    max-width: 99vw;
-  }
-
-  .main {
-    padding: 34px 10vw 32px 5vw;
-  }
-}
-
-@media (max-width: 1000px) {
-  .container {
-    flex-direction: column;
-    min-width: 0;
-    max-width: 100vw;
-  }
-
-  .side {
-    width: 100%;
-    min-width: unset;
-    max-width: unset;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 30px 8vw 30px 6vw;
-    box-shadow: none;
-  }
-
-  .main {
-    gap: 22px;
-    padding: 34px 5vw;
-  }
-
-  .avatar-glass {
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 700px) {
-  .container {
-    min-height: 100vh;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .side {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    min-width: unset;
-    max-width: 100vw;
-    padding: 18px 3vw;
-  }
-
-  .main {
-    gap: 15px;
-    padding: 16px 2vw 18px;
-  }
-
-  .skills-cards {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .skill-card {
-    width: 100%;
-  }
 }
 
 ::-webkit-scrollbar {
