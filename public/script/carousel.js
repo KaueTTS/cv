@@ -1,8 +1,3 @@
-function downloadPDF() {
-    window.print();
-}
-
-// -------- Skills Carousel --------
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.getElementById("carouselTrack");
   const slides = document.querySelectorAll(".carousel-slide");

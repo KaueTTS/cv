@@ -415,6 +415,30 @@ img {
   line-height: 1.6;
 }
 
+/* Esconde o conteúdo extra por padrão */
+.conteudo-extra {
+  display: none;
+}
+
+/* Estilo do botão "Ler mais" */
+.btn-ler-mais {
+  background: none;
+  border: none;
+  color: #2563eb; /* Mesma cor azul que você usou nos ícones */
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px;
+  text-decoration: underline transparent;
+  transition: text-decoration 0.2s ease;
+}
+
+.btn-ler-mais:hover {
+  text-decoration: underline #2563eb;
+}
+
 .exp-list {
   margin: 0;
   padding: 0;
@@ -451,7 +475,7 @@ img {
 .skills-carousel {
   position: relative;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 38px;
 }
 
 .carousel-viewport {
