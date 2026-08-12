@@ -1,19 +1,29 @@
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* -------- Desktops Pequenos / Notebooks (max-width: 1200px) -------- */
 @media (max-width: 1200px) {
   .container {
     min-width: 0;
-    max-width: 99vw;
+    max-width: 98vw;
+    margin: 15px auto;
   }
 
   .main {
-    padding: 34px 10vw 32px 5vw;
+    padding: 34px 5vw;
   }
 }
 
+/* -------- Tablets em Modo Paisagem (max-width: 1000px) -------- */
 @media (max-width: 1000px) {
   .container {
     flex-direction: column;
     min-width: 0;
     max-width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .side {
@@ -24,8 +34,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px 30px;
-    padding: 30px 6vw;
+    gap: 24px 30px;
+    padding: 36px 5vw;
     box-shadow: none;
   }
 
@@ -35,8 +45,14 @@
   }
 
   .side section {
-    flex: 1 1 200px;
+    flex: 1 1 220px;
     min-width: 200px;
+  }
+
+  /* Garante espaço adequado para o bloco de cursos no layout horizontal */
+  .side section[aria-label="Cursos e Certificados"],
+  .side section[aria-label="Cursos"] {
+    flex: 1 1 280px;
   }
 
   .avatar-glass {
@@ -62,18 +78,13 @@
   }
 }
 
+/* -------- Tablets em Modo Retrato e Smartphones Grandes (max-width: 768px) -------- */
 @media (max-width: 768px) {
-  .container {
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
   .side {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    padding: 28px 6vw;
+    gap: 28px;
+    padding: 30px 5vw;
     text-align: center;
   }
 
@@ -126,34 +137,30 @@
     font-size: 0.95rem;
   }
 
+  /* Ajuste no carrossel de habilidades para telas médias */
   .skills-carousel {
-    margin-top: 10px;
+    padding: 0 28px;
+  }
+
+  .carousel-btn {
+    width: 34px;
+    height: 34px;
   }
 
   .carousel-prev {
-    left: -8px;
+    left: -6px;
   }
 
   .carousel-next {
-    right: -8px;
+    right: -6px;
   }
 }
 
-@media (max-width: 700px) {
-  .container {
-    min-height: 100vh;
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
+/* -------- Smartphones Menores (max-width: 480px) -------- */
+@media (max-width: 480px) {
   .side {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    min-width: unset;
-    max-width: 100vw;
-    padding: 18px 3vw;
+    padding: 24px 4vw;
+    gap: 22px;
   }
 
   .download {
@@ -167,23 +174,44 @@
 
   .main {
     gap: 15px;
-    padding: 16px 2vw 18px;
+    padding: 20px 4vw 24px;
+  }
+
+  /* Otimização dos cards de cursos na sidebar para telas pequenas */
+  .side section[aria-label="Cursos e Certificados"] .info li span,
+  .side section[aria-label="Cursos"] .info li span {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .side section[aria-label="Cursos e Certificados"] .info li a,
+  .side section[aria-label="Cursos"] .info li a {
+    margin-left: 0;
+  }
+
+  /* Ajustes finos do carrossel no mobile */
+  .skills-carousel {
+    padding: 0 18px;
   }
 
   .carousel-btn {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 
   .carousel-prev {
-    left: -4px;
+    left: -10px;
   }
 
   .carousel-next {
-    right: -4px;
+    right: -10px;
   }
 
   .carousel-dots {
     margin-top: 14px;
+  }
+
+  .skill-card {
+    padding: 18px 14px;
   }
 }
