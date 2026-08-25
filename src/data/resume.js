@@ -16,9 +16,8 @@ export const profile = {
 };
 
 export const professionalSummary = [
-  'Desenvolvedor Back-End com experiência prática em arquitetura de microsserviços utilizando Go.',
-  'Atuação em sistemas B2B de alta demanda, com foco em performance, escalabilidade, manutenibilidade e integração entre serviços.',
-  'Experiência com observabilidade (Datadog), cache (Redis), mecanismos de busca (Elasticsearch/OpenSearch) e bancos de dados SQL e NoSQL.',
+  'Desenvolvedor Back-End com experiência no desenvolvimento e manutenção de microsserviços utilizando Go, atuando em plataforma B2B de vendas e e-commerce.',
+  'Experiência com APIs REST, integrações entre serviços, Redis, Elasticsearch/OpenSearch, bancos SQL/NoSQL e observabilidade com Datadog, com foco em performance, escalabilidade e manutenibilidade.',
 ];
 
 export const interests = [
@@ -35,7 +34,7 @@ export const experiences = [
     date: 'jul/2025 — atual',
     summary: 'Atuação no desenvolvimento de nova plataforma para substituição do sistema legado de vendas, evoluindo para soluções de frente de vendas e e-commerce B2B.',
     highlights: [
-      { text: 'Desenvolve e mantém microsserviços e APIs REST com Golang, Fiber e PHP/Laravel para uma plataforma B2B de vendas e e-commerce que substitui o sistema legado.', showOnPdf: true },
+      { text: 'Desenvolve e mantém microsserviços e APIs REST em Go/Fiber e PHP/Laravel na modernização da plataforma B2B de vendas e e-commerce, substituindo gradualmente o sistema legado.', showOnPdf: true },
       { text: 'Implementa integrações internas e externas e regras de negócio nos domínios de produtos, carrinho, pedidos, clientes, orçamento e Backend for Frontend (BFF).', showOnPdf: true },
       { text: 'Realiza consultas, indexação e modelagem de dados com Elasticsearch/OpenSearch, MySQL, SQL Server, PostgreSQL e MongoDB.', showOnPdf: true },
       { text: 'Aplica Redis como camada de cache em endpoints críticos, reduzindo latência e melhorando a performance das APIs.', showOnPdf: true },
@@ -66,7 +65,7 @@ export const experiences = [
     date: 'dez/2023 — fev/2024',
     highlights: [
       { text: 'Automatizou tarefas operacionais com scripts Batch/Shell e planilhas, além de criar e ajustar processos de suporte.', showOnPdf: true },
-      { text: 'Atendeu chamados no Jira Workspace e realizou configuração do Microsoft Office 365, impressoras e imagens ISO.', showOnPdf: true },
+      { text: 'Atendeu chamados no Jira Workspace e realizou configuração do Microsoft Office 365, impressoras e imagens ISO.', showOnPdf: false },
     ],
   },
   {
@@ -93,27 +92,26 @@ export const skillGroups = [
 ];
 
 export const resumeSkillGroups = [
-  ['Linguagens e frameworks', 'Golang, PHP, JavaScript, Fiber, Laravel'],
-  ['APIs e arquitetura', 'Microsserviços, APIs REST, Swagger/OpenAPI, JSON, Backend for Frontend (BFF), DDD, Design Patterns (GoF), OOP, JWT'],
-  ['Dados e cache', 'MySQL, SQL Server, MongoDB, Elasticsearch, OpenSearch, Redis, SQLite, PostgreSQL'],
-  ['DevOps e observabilidade', 'AWS, Docker, Kubernetes, CI/CD, Datadog, Grafana, Git, GitLab, Keycloak'],
-  ['Ferramentas e práticas', 'Postman, Jira, JQL, Confluence, Kanban, Scrum, testes unitários, PowerShell'],
+  ['Backend', 'Golang, PHP, Fiber, Laravel, APIs REST, Microsserviços, BFF'],
+  ['Dados e cache', 'Redis, Elasticsearch/OpenSearch, PostgreSQL, MySQL, SQL Server, MongoDB'],
+  ['Infraestrutura e observabilidade', 'Docker, Kubernetes, AWS, CI/CD, Datadog'],
+  ['Arquitetura e práticas', 'Swagger/OpenAPI, DDD, Design Patterns, Testes unitários, Git/GitLab, Keycloak'],
 ];
 
 export const education = {
   degree: 'Bacharelado em Engenharia de Software',
   institution: 'Universidade Estácio de Sá — EAD',
-  period: '2023 — 2026 (em andamento)',
+  period: '2023 — atual',
 };
 
 export const languages = [
   { name: 'Português', level: 'Nativo' },
-  { name: 'Inglês', level: 'Básico — A2 (em desenvolvimento)' },
+  { name: 'Inglês', level: 'Básico — A2' },
 ];
 
 export const courses = [
-  { name: 'Microsserviços: padrões de projeto', provider: 'Alura', year: '2026', duration: '6h', url: 'https://cursos.alura.com.br/user/kaue-bertaze/course/microsservicos-padroes-projeto/certificate' },
-  { name: 'Linguagem Go', provider: 'Alura', year: '2025', duration: '51h', url: 'https://cursos.alura.com.br/user/kaue-bertaze/degree-go-298528/certificate' },
-  { name: 'Microsoft SQL Server', provider: 'Alura', year: '2024', duration: '79h', url: 'https://cursos.alura.com.br/user/kaue-bertaze/degree-microsoft-sql-server-2022-501719/certificate' },
-  { name: 'Full-Stack Development', provider: 'Mimo', year: '2024', url: 'https://drive.google.com/file/d/1HlWv9bFTM8EZn2clSAjxCO-9ApBlVJ9_/view?usp=drive_link' },
+  { name: 'Microsserviços: padrões de projeto', provider: 'Alura', year: '2026', url: 'https://cursos.alura.com.br/user/kaue-bertaze/course/microsservicos-padroes-projeto/certificate' },
+  { name: 'Linguagem Go', provider: 'Alura', year: '2025', url: 'https://cursos.alura.com.br/user/kaue-bertaze/degree-go-298528/certificate' },
+  { name: 'Microsoft SQL Server', provider: 'Alura', year: '2024', url: 'https://cursos.alura.com.br/user/kaue-bertaze/degree-microsoft-sql-server-2022-501719/certificate' },
+  { name: 'Full-Stack Development', provider: 'Mimo', year: '2024', url: 'https://drive.google.com/file/d/1HlWv9bFTM8EZn2clSAjxCO-9ApBlVJ9_/view?usp=drive_link', showOnPdf: false },
 ];

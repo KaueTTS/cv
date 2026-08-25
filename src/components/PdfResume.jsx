@@ -226,8 +226,8 @@ export function ResumeDocument() {
         <Text style={styles.meta}>{education.institution} | {education.period}</Text>
       </Section>
 
-      <Section title="Últimos Cursos e Certificações">
-        {courses.map((course) => <View style={styles.course} key={course.name} wrap={false}>
+      <Section title="Cursos e Certificações Selecionados">
+        {courses.filter((course) => course.showOnPdf !== false).map((course) => <View style={styles.course} key={course.name} wrap={false}>
           <Text>
             <Link src={course.url} style={[styles.link, styles.courseName]}>{course.name}</Link>
             {` — ${course.provider}, ${course.year}${course.duration ? ` (${course.duration})` : ''}`}
