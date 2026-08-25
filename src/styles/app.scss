@@ -1,0 +1,15 @@
+@use './style';
+@use './responsive';
+
+button,
+a {
+  font: inherit;
+}
+
+.conteudo-extra.app-visible {
+  display: block;
+}
+
+.card-title {
+  gap: 6px;
+}
