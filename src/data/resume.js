@@ -16,8 +16,8 @@ export const profile = {
 };
 
 export const professionalSummary = [
-  'Desenvolvedor Back-End com experiência no desenvolvimento e manutenção de microsserviços utilizando Go, atuando em plataforma B2B de vendas e e-commerce.',
-  'Experiência com APIs REST, integrações entre serviços, Redis, Elasticsearch/OpenSearch, bancos SQL/NoSQL e observabilidade com Datadog, com foco em performance, escalabilidade e manutenibilidade.',
+  'Desenvolvedor backend com experiência em Go/Fiber na evolução de APIs, BFFs, workers e microsserviços de uma plataforma B2B de vendas em produção.',
+  'Atua com bancos relacionais e não relacionais, Redis, OpenSearch, AWS, Kubernetes e Datadog, com entregas em confiabilidade, segurança, observabilidade e otimização de recursos.',
 ];
 
 export const interests = [
@@ -32,14 +32,17 @@ export const experiences = [
     company: 'Grupo Multilaser - Remoto',
     workMode: 'Remoto',
     date: 'jul/2025 — atual',
-    summary: 'Atuação no desenvolvimento de nova plataforma para substituição do sistema legado de vendas, evoluindo para soluções de frente de vendas e e-commerce B2B.',
+    summary: 'Manutenção e evolução de APIs, BFFs, workers e cronjobs para uma plataforma B2B de vendas, incluindo uma solução B2B em produção em que os próprios clientes realizam seus pedidos.',
     highlights: [
-      { text: 'Desenvolve e mantém microsserviços e APIs REST em Go/Fiber e PHP/Laravel na modernização da plataforma B2B de vendas e e-commerce, substituindo gradualmente o sistema legado.', showOnPdf: true },
-      { text: 'Implementa integrações internas e externas e regras de negócio nos domínios de produtos, carrinho, pedidos, clientes, orçamento e Backend for Frontend (BFF).', showOnPdf: true },
-      { text: 'Realiza consultas, indexação e modelagem de dados com Elasticsearch/OpenSearch, MySQL, SQL Server, PostgreSQL e MongoDB.', showOnPdf: true },
-      { text: 'Aplica Redis como camada de cache em endpoints críticos, reduzindo latência e melhorando a performance das APIs.', showOnPdf: true },
-      { text: 'Monitora e investiga falhas com Datadog, além de documentar contratos de API com Swagger/OpenAPI.', showOnPdf: true },
-      { text: 'Colabora com times de produto e engenharia na evolução da arquitetura, escalabilidade e manutenibilidade da plataforma.', showOnPdf: true },
+      { text: 'Mantém e evolui APIs REST, BFF, worker e cronjob em Go, principalmente com Fiber, nos domínios de produtos, precificação, clientes, carrinho, pedidos e estoque de uma plataforma B2B com canais web e mobile.', showOnPdf: true },
+      { text: 'Aumentou a confiabilidade da precificação ao corrigir regras de desconto e impedir a mistura de faixas de frete entre empresas, além de eliminar duas consultas por requisição no cálculo de frete.', showOnPdf: true },
+      { text: 'Migrou fluxos de empresas e condições de pagamento do SQL Server para MySQL, reduziu pela metade as consultas nos fluxos de pagamento e frete e eliminou a dependência do SQL Server no boot da API de precificação.', showOnPdf: false },
+      { text: 'Corrigiu falhas críticas no fluxo de pedidos, eliminando respostas HTTP 502, evitando sobrescrita e perda de dados e antecipando a validação de regras comerciais antes do envio ao ERP.', showOnPdf: true },
+      { text: 'Migrou o worker de estoque de Elasticsearch com Basic Auth para OpenSearch com IAM Role e assinatura AWS SigV4, removendo credenciais estáticas e implementando operações em lote para atualização e remoção de produtos sem estoque.', showOnPdf: true },
+      { text: 'Documentou todos os endpoints da API de pedidos com Swagger/OpenAPI e implementou tracing distribuído com Datadog APM, permitindo rastreamento ponta a ponta entre os serviços da plataforma e o ERP.', showOnPdf: true },
+      { text: 'Redimensionou os recursos reservados pela API de pedidos no Kubernetes, reduzindo os requests por pod de 1 CPU para 100m e de 1Gi para 200Mi, além de ampliar o maxReplicas do HPA de 2 para 3.', showOnPdf: true },
+      { text: 'Estendeu a geração de PDFs com wkhtmltopdf para o fluxo de pedidos realizados diretamente pelos clientes, reutilizando estilos CSS no BFF da plataforma.', showOnPdf: false },
+      { text: 'Realizou manutenção no sistema legado com PHP/Laravel, JavaScript, SQL Server e MySQL, incluindo procedures, jobs e sincronização de dados para operação online e offline.', showOnPdf: false },
     ],
   },
   {
@@ -49,12 +52,9 @@ export const experiences = [
     workMode: 'Híbrido',
     date: 'mar/2024 — jun/2025',
     highlights: [
-      { text: 'Consultou e validou dados com MySQL, MongoDB e SQL Server e executou ajustes pontuais em projetos e procedures por meio de GMUD.', showOnPdf: true },
-      { text: 'Investigou erros e inconsistências com Datadog e Grafana e realizou validações/correções em APIs com Postman e Swagger.', showOnPdf: true },
-      { text: 'Prestou suporte N1 e N2 a sistemas internos, registrando e acompanhando demandas na plataforma Jira.', showOnPdf: true },
-      { text: 'Documentou processos no Confluence e criou dashboards e kanbans com Jira Query Language (JQL).', showOnPdf: true },
-      { text: 'Prestou suporte aos sistemas Multi, incluindo Mercury, Multiyou, Intranet, Revendedor e CP.', showOnPdf: false },
-      { text: 'Apoiou equipes de Desenvolvimento, Microinformática e Backoffice na análise e resolução de demandas.', showOnPdf: false },
+      { text: 'Investigou e corrigiu incidentes em APIs e inconsistências de dados utilizando Datadog, Grafana, Postman, Swagger, MySQL, SQL Server e MongoDB.', showOnPdf: true },
+      { text: 'Prestou suporte N1 e N2 a sistemas internos e executou mudanças controladas via GMUD em aplicações e procedures, acompanhando as demandas no Jira.', showOnPdf: true },
+      { text: 'Documentou processos no Confluence e criou dashboards e kanbans com Jira Query Language (JQL).', showOnPdf: false },
     ],
   },
   {
@@ -75,8 +75,8 @@ export const experiences = [
     workMode: 'Presencial',
     date: 'fev/2023 — nov/2023',
     highlights: [
-      { text: 'Prestou suporte a hardware, software e sistemas operacionais Windows, macOS, Linux, Android e iOS, incluindo preparação e reparo de dispositivos.', showOnPdf: true },
-      { text: 'Gerenciou usuários no Active Directory e apoiou o controle de estoque, chips e envio de equipamentos.', showOnPdf: true },
+      { text: 'Prestou suporte a hardware, software e sistemas operacionais e gerenciou usuários no Active Directory, incluindo preparação e reparo de dispositivos.', showOnPdf: true },
+      { text: 'Atuou com ambientes Windows, macOS, Linux, Android e iOS e apoiou o controle de estoque, chips e envio de equipamentos.', showOnPdf: false },
     ],
   },
 ];
@@ -84,17 +84,17 @@ export const experiences = [
 export const skillGroups = [
   ['Linguagens e Frameworks', ['Golang', 'PHP', 'JavaScript', 'Python', 'Node.js', 'Laravel', 'Fiber', 'React', 'HTML', 'CSS', 'Cypress']],
   ['Arquitetura e Desenvolvimento de Software', ['Microsserviços', 'Monólitos', 'REST APIs', 'Swagger', 'DDD (Domain-Driven Design)', 'GoF (Design Patterns)', 'OOP (Object-Oriented Programming)', 'JWT (JSON Web Tokens)']],
-  ['Bancos de Dados e Armazenamento', ['SQL', 'MySQL', 'MongoDB', 'Elasticsearch', 'Redis', 'SQLite', 'JQL', 'Postgres']],
-  ['DevOps, Cloud e Infraestrutura', ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Grafana', 'Datadog', 'Keycloak']],
+  ['Bancos de Dados e Armazenamento', ['MySQL', 'SQL Server', 'MongoDB', 'Elasticsearch', 'OpenSearch', 'Redis', 'SQLite', 'JQL', 'PostgreSQL']],
+  ['DevOps, Cloud e Infraestrutura', ['AWS SQS', 'AWS IAM', 'AWS Secrets Manager', 'RabbitMQ', 'Docker', 'Kubernetes', 'CI/CD', 'Grafana', 'Datadog', 'Keycloak']],
   ['Versionamento e Qualidade de Software', ['Git', 'GitHub', 'GitLab', 'Testes unitários']],
   ['Outros Conhecimentos Tecnológicos', ['Kanban', 'Scrum', 'Active Directory', 'PowerShell', 'Windows', 'MacOS', 'Linux', 'Confluence', 'Jira', 'Markdown']],
   ['Soft Skills', ['Trabalho em equipe', 'Resolução de problemas', 'Pensamento analítico', 'Adaptabilidade', 'Organização', 'Proatividade', 'Gestão do tempo', 'Mentalidade ágil', 'Aprendizado contínuo', 'Resiliência']],
 ];
 
 export const resumeSkillGroups = [
-  ['Backend', 'Golang, PHP, Fiber, Laravel, APIs REST, Microsserviços, BFF'],
+  ['Backend', 'Golang, Fiber, PHP, Laravel, APIs REST, Microsserviços, BFF'],
   ['Dados e cache', 'Redis, Elasticsearch/OpenSearch, PostgreSQL, MySQL, SQL Server, MongoDB'],
-  ['Infraestrutura e observabilidade', 'Docker, Kubernetes, AWS, CI/CD, Datadog'],
+  ['Infraestrutura e observabilidade', 'Docker, Kubernetes, AWS SQS, AWS IAM, AWS Secrets Manager, RabbitMQ, CI/CD, Datadog'],
   ['Arquitetura e práticas', 'Swagger/OpenAPI, DDD, Design Patterns, Testes unitários, Git/GitLab, Keycloak'],
 ];
 
